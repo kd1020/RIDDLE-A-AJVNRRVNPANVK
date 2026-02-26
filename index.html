@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAIN REACTION – THE CLUBS PROTOCOL</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;500;600&display=swap');
+
+        :root {
+            --neon-blue: #00f3ff;
+            --soft-white: #e0f0ff;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #050505;
+            font-family: 'Rajdhani', sans-serif;
+            color: var(--soft-white);
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .bg-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        .content-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .glass-box {
+            background: rgba(15, 25, 35, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 243, 255, 0.15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 243, 255, 0.05);
+            border-radius: 12px;
+            padding: 4rem 3rem;
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInGlass 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            color: var(--neon-blue);
+            margin: 0 0 2.5rem 0;
+            letter-spacing: 4px;
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.5), 0 0 30px rgba(0, 243, 255, 0.2);
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin: 0 0 1.5rem 0;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 2;
+            margin: 0;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        @keyframes fadeInGlass {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.98);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .glass-box {
+                padding: 2.5rem 1.5rem;
+                border-radius: 8px;
+            }
+            h1 {
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+                margin-bottom: 2rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+                margin-bottom: 1.2rem;
+            }
+            p {
+                font-size: 1.05rem;
+                line-height: 1.8;
+                letter-spacing: 1px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="background1.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <main class="content-wrapper">
+        <div class="glass-box">
+            <h1>CHAIN REACTION – THE CLUBS PROTOCOL</h1>
+            <h2>RIDDLE A – THE SILENT NODE</h2>
+            <p>
+                Among the smallest primes I stand,<br>
+                Yet not the first upon the land.<br>
+                Double me if circuits agree,<br>
+                Else shift your trust and follow three.<br>
+                Silence knows what sparks reveal,<br>
+                But only echoes make it real.
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>
